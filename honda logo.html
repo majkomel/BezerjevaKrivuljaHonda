@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Honda bezier</title>
+
+<script>
+window.onload = function () {
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "#D3241C";
+    
+
+    ctx.beginPath();
+	//zunanji krog
+    //M 56, 213 C 61, 135, 45, 90, 245, 96
+    ctx.moveTo(56, 213);
+    ctx.bezierCurveTo(61, 135, 45, 90, 245, 96);
+
+    
+    ctx.moveTo(456, 236);
+    ctx.bezierCurveTo(457, 135, 471, 93, 245, 96);
+
+    
+    ctx.moveTo(456, 236);
+    ctx.bezierCurveTo(445, 386, 454, 424, 249, 421);
+
+  // M 56, 213 C 62, 373, 56, 426, 249, 421
+    ctx.moveTo(56, 213);
+    ctx.bezierCurveTo(62, 373, 56, 426, 249, 421);
+	
+	ctx.stroke();
+	ctx.closePath();
+	
+	//notranji krog
+	ctx.beginPath();
+	//M 76, 214 C 77, 142, 72, 106, 245, 109
+	ctx.moveTo(76, 214);
+    ctx.bezierCurveTo(77, 142, 72, 106, 245, 109);
+	
+	//M 436, 213 C 434, 119, 421, 111, 245, 109
+	ctx.moveTo(436, 213);
+    ctx.bezierCurveTo(434, 119, 421, 111, 245, 109);
+	
+	//M 436, 213 C 434, 405, 421, 408, 246, 407
+	ctx.moveTo(436, 213);
+    ctx.bezierCurveTo(434, 405, 421, 408, 246, 407);
+	
+	//M 76, 215 C 80, 411, 102, 403, 246, 407
+	ctx.moveTo(76, 214);
+    ctx.bezierCurveTo(80, 411, 102, 403, 246, 407);
+	ctx.stroke();
+	ctx.closePath();
+	
+	//logo h
+	ctx.beginPath();
+
+    // M 136, 127 C 152, 359, 143, 238, 154, 392
+    ctx.moveTo(136, 126);
+    ctx.bezierCurveTo(152, 359, 143, 238, 154, 393);
+
+    // M 136, 127 C 163, 124, 136, 127, 163, 124
+    ctx.moveTo(136, 126);
+    ctx.bezierCurveTo(163, 124, 136, 127, 164, 124);
+
+    // M 253, 298 C 188, 296, 200, 274, 163, 124
+    ctx.moveTo(253, 298);
+    ctx.bezierCurveTo(188, 296, 200, 274, 164, 124);
+
+    // M 253, 298 C 316, 303, 319, 263, 348, 124
+    ctx.moveTo(253, 298);
+    ctx.bezierCurveTo(316, 303, 319, 263, 348, 124);
+
+    // M 375, 125 C 348, 124, 375, 125, 348, 124
+    ctx.moveTo(375, 125);
+    ctx.bezierCurveTo(348, 124, 375, 125, 347, 124);
+
+    // M 375, 125 C 358, 378, 375, 125, 357, 393
+    ctx.moveTo(375, 125);
+    ctx.bezierCurveTo(358, 378, 375, 125, 357, 394);
+
+    // M 318, 396 C 357, 393, 318, 396, 357, 393
+    ctx.moveTo(318, 396);
+    ctx.bezierCurveTo(357, 393, 318, 396, 358, 393);
+
+    // M 318, 396 C 299, 311, 282, 322, 256, 321
+    ctx.moveTo(318, 396);
+    ctx.bezierCurveTo(299, 310, 286, 322, 256, 320);
+
+    // M 195, 396 C 211, 320, 226, 318, 256, 321
+    ctx.moveTo(195, 396);
+    ctx.bezierCurveTo(211, 322, 226, 318, 256, 320);
+
+    // M 195, 396 C 154, 394, 195, 396, 154, 394
+    ctx.moveTo(195, 396);
+    ctx.bezierCurveTo(154, 394, 195, 396, 152, 394);
+	ctx.stroke();
+	ctx.closePath();
+};
+</script>
+</head>
+<body>
+<canvas id="canvas" width="800" height="500"></canvas>
+</body>
+</html>
+
+
+
