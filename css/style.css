@@ -1,0 +1,156 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- TOP NAVIGATION --- */
+.meni {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+    background: rgba(1,1,1);
+    z-index: 1000;
+}
+
+.meni canvas {
+    width: 60px;
+    height: 60px;
+}
+
+.meni nav {
+    display: flex;
+}
+
+.meni nav a {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 32px; /* spacing between links instead of gap */
+}
+
+.meni nav a:first-child {
+    margin-left: 0; /* no margin on the first link */
+}
+
+.meni nav a:hover {
+    color: #ff0000;
+}
+
+/* --- HERO SECTIONS --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    background: rgba(0,0,0,0.45);
+    color: white;
+    padding: 48px;
+    max-width: 40%;
+    border-radius: 8px;
+    margin: 32px;
+}
+
+.hero-text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+/* --- FOOTER --- */
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    flex: 0 0 auto;
+    margin-right: 32px; /* spacing between logo and text instead of gap */
+}
+
+.footer-text {
+    flex: 1 1 auto;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-spacer {
+    height: 80px; /* white space below footer */
+    background: white;
+}
+
+/* --- FIXED LOGO --- */
+.fixed-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.fixed-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero-text {
+        max-width: 80%;
+        text-align: center;
+        padding: 32px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 19px;
+    }
+
+    .meni nav a {
+        font-size: 16px;
+        margin-left: 16px; /* reduce spacing on smaller screens */
+    }
+
+    .meni nav a:first-child {
+        margin-left: 0;
+    }
+
+    .footer-logo {
+        margin-right: 16px;
+    }
+}
