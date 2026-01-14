@@ -1,4 +1,4 @@
-/* --- RESET --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* --- TOP NAVIGATION --- */
+
 .meni {
     position: fixed;
     top: 0;
@@ -37,18 +37,18 @@ body, html {
     font-size: 18px;
     text-decoration: none;
     transition: color 0.3s;
-    margin-left: 32px; /* spacing between links instead of gap */
+    margin-left: 32px; 
 }
 
 .meni nav a:first-child {
-    margin-left: 0; /* no margin on the first link */
+    margin-left: 0;
 }
 
 .meni nav a:hover {
     color: #ff0000;
 }
 
-/* --- HERO SECTIONS --- */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -93,7 +93,7 @@ body, html {
 
 .footer-logo {
     flex: 0 0 auto;
-    margin-right: 32px; /* spacing between logo and text instead of gap */
+    margin-right: 32px;
 }
 
 .footer-text {
@@ -104,11 +104,10 @@ body, html {
 }
 
 .footer-spacer {
-    height: 80px; /* white space below footer */
+    height: 80px;
     background: white;
 }
 
-/* --- FIXED LOGO --- */
 .fixed-logo {
     position: fixed;
     bottom: 20px;
@@ -125,7 +124,7 @@ body, html {
     object-fit: contain;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
     .hero-text {
         max-width: 80%;
@@ -143,7 +142,7 @@ body, html {
 
     .meni nav a {
         font-size: 16px;
-        margin-left: 16px; /* reduce spacing on smaller screens */
+        margin-left: 16px;
     }
 
     .meni nav a:first-child {
@@ -154,3 +153,4 @@ body, html {
         margin-right: 16px;
     }
 }
+
