@@ -2,16 +2,16 @@ window.onload = function () {
     const canvas = document.getElementById("LogoCanvas");
     const ctx = canvas.getContext("2d");
 
-    // Clear canvas
+   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Scale everything to fit the canvas
+    
     const originalWidth = 500;
     const scale = canvas.width / originalWidth;
     ctx.save();
     ctx.scale(scale, scale);
 
-    /* ================= OUTER + INNER ================= */
+    
     ctx.lineWidth = 3 / scale;
     ctx.strokeStyle = "#CC0000";
     ctx.fillStyle = "#CC0000";
@@ -34,7 +34,7 @@ window.onload = function () {
     ctx.fill("evenodd");
     ctx.stroke();
 
-    /* ================= LOGO SHAPE ================= */
+    
     ctx.fillStyle = "#CC0000";
     ctx.strokeStyle = "transparent";
 
@@ -55,7 +55,7 @@ window.onload = function () {
 
     ctx.restore();
 
-    // --- Download canvas as PNG ---
+    
     const downloadBtn = document.getElementById("downloadLogo");
     if (downloadBtn) {
         downloadBtn.addEventListener("click", function () {
@@ -71,10 +71,11 @@ window.onload = function () {
     const fixedLogo = document.getElementById("fixedLogo");
     fixedLogo.addEventListener("click", function () {
         Swal.fire({
-            title: "Credits",
+            title: "Credits:",
             text: "Maj Komel",
             icon: "info",
-            confirmButtonText: "Cool",
+            confirmButtonText: "OK",
+			confirmButtonColor: "#CC0000"
         });
     });
 };
