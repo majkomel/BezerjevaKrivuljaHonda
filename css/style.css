@@ -1,14 +1,12 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+html, body {
     font-family: 'Montserrat', sans-serif;
 }
-
 
 .meni {
     position: fixed;
@@ -18,7 +16,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 8px 32px;
-    background: rgba(1,1,1);
+    background: rgb(1, 1, 1);
     z-index: 1000;
 }
 
@@ -36,8 +34,8 @@ body, html {
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
+    margin-left: 32px;
     transition: color 0.3s;
-    margin-left: 32px; 
 }
 
 .meni nav a:first-child {
@@ -48,18 +46,16 @@ body, html {
     color: #ff0000;
 }
 
-
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     background-size: cover;
     background-position: center;
 }
 
 .hero-text {
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
     color: white;
     padding: 48px;
     max-width: 40%;
@@ -70,13 +66,11 @@ body, html {
 .hero-text h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 56px;
-    font-weight: 700;
     margin-bottom: 8px;
 }
 
 .hero-text h2 {
     font-size: 24px;
-    font-weight: 400;
     margin-bottom: 16px;
 }
 
@@ -85,27 +79,48 @@ body, html {
     line-height: 1.5;
 }
 
-/* --- FOOTER --- */
+.site-footer {
+    background: #f6f6f6;
+    padding: 48px 32px;
+    border-top: 1px solid #ddd;
+}
+
 .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    gap: 40px;
     align-items: flex-start;
 }
 
 .footer-logo {
-    flex: 0 0 auto;
-    margin-right: 32px;
+    flex-shrink: 0;
 }
 
 .footer-text {
-    flex: 1 1 auto;
-    color: #666;
-    line-height: 1.5;
-    text-align: center;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.footer-spacer {
-    height: 80px;
-    background: white;
+.footer-main {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.footer-note {
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.footer-disclaimer {
+    font-size: 13px;
+    color: #777;
 }
 
 .fixed-logo {
@@ -116,6 +131,7 @@ body, html {
     height: 80px;
     cursor: pointer;
     z-index: 10000;
+   
 }
 
 .fixed-logo img {
@@ -123,7 +139,6 @@ body, html {
     height: 100%;
     object-fit: contain;
 }
-
 
 @media (max-width: 768px) {
     .hero-text {
@@ -145,12 +160,13 @@ body, html {
         margin-left: 16px;
     }
 
-    .meni nav a:first-child {
-        margin-left: 0;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .footer-logo {
-        margin-right: 16px;
+        margin-bottom: 24px;
     }
 }
-

@@ -71,11 +71,40 @@ window.onload = function () {
     const fixedLogo = document.getElementById("fixedLogo");
     fixedLogo.addEventListener("click", function () {
         Swal.fire({
-            title: "Credits:",
+            title: "Izdelal:",
             text: "Maj Komel",
             icon: "info",
             confirmButtonText: "OK",
 			confirmButtonColor: "#CC0000"
         });
+		
     });
+	
+	// --- Hide fixed logo when overlapping footer ---
+const footer = document.querySelector("footer");
+const fixedLogoEl = document.getElementById("fixedLogo");
+
+function checkLogoOverlap() {
+    const footerRect = footer.getBoundingClientRect();
+    const logoRect = fixedLogoEl.getBoundingClientRect();
+
+    const isOverlapping =
+        logoRect.bottom > footerRect.top &&
+        logoRect.top < footerRect.bottom;
+
+    if (isOverlapping) {
+        fixedLogoEl.style.opacity = "0";
+        fixedLogoEl.style.pointerEvents = "none";
+    } else {
+        fixedLogoEl.style.opacity = "1";
+        fixedLogoEl.style.pointerEvents = "auto";
+    }
+}
+
+window.addEventListener("scroll", checkLogoOverlap);
+window.addEventListener("resize", checkLogoOverlap);
+
+// initial check
+checkLogoOverlap();
+
 };
