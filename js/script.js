@@ -53,19 +53,10 @@ window.onload = function () {
     ctx.closePath();
     ctx.fill();
 
-    ctx.restore();
+    c
 
     
-    const downloadBtn = document.getElementById("downloadLogo");
-    if (downloadBtn) {
-        downloadBtn.addEventListener("click", function () {
-            const pngDataUrl = canvas.toDataURL("image/png");
-            const link = document.createElement("a");
-            link.href = pngDataUrl;
-            link.download = "honda-logo.png";
-            link.click();
-        });
-    }
+    
 
     // --- SweetAlert on fixed logo ---
     const fixedLogo = document.getElementById("fixedLogo");
@@ -108,3 +99,4 @@ window.addEventListener("resize", checkLogoOverlap);
 checkLogoOverlap();
 
 };
+
